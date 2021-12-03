@@ -16,16 +16,27 @@ body {
     font-family: 'GongGothicMedium';
     height:100vh;
 }
-.mainTitle {
+.topTitle {
     position:absolute;
-    color:#fff;
+    color:#808080;
+    top : 0;
     right : 0;
     margin : 1rem 1rem 0 0 ;
     font-size: 60px;
+    z-index: 1;
+}
+.bottomTitle {
+    position:absolute;
+    color:#fff;
+    right : 0;
+    top:85%;
+    margin : 0 1rem 1rem 0 ;
+    font-size: 60px;
+    z-index: 1;
 }
 .arcReactor {
     position:absolute;
-    top : 25%;
+    top : 10%;
     right : 3%;
     width: 40vw;
     height:40vw;
@@ -33,14 +44,14 @@ body {
     display: flex;
 }
 .reactor-container {
-    width: 40vw;
-    height: 40vw;
+    width: 430px;
+    height: 430px;
     margin: auto;
     /* border: 1px dashed #888888; */
 }
 .reactor-container-inner {
-    height: 35vw;
-    width: 35vw;
+    height: 430px;
+    width: 430px;
     background-color: rgb(22, 26, 27);;
     box-shadow: 0px 0px 6px 3px #52fefe;
 }
@@ -176,8 +187,63 @@ body {
     }
 }
 @keyframes ping {
-    75%, 100% {
+    0% {
         transform: scale(2);
+        opacity: 0.5;
+    }
+    75%, 100% {
+        transform: scale(0.1);
         opacity: 0;
     }
+}
+.secondContents {
+    background-color: #222931;
+    background-image: url("/img/bg11.jpeg");
+    background-repeat : no-repeat;
+    background-size : cover;
+    font-family: 'GongGothicMedium';
+    height:100vh;
+}
+.scouter {
+    position:absolute;
+    width:20rem;
+    height: 20rem;
+    border:5px solid #52fefe;
+    box-shadow: 0 0 10px 10px #52fefe, 0 0 18px 12px #52fefe inset;
+    animation: pulse 0.5s infinite;
+    top : 3rem;
+    left:13rem;
+}
+.innerScouter {
+    position:absolute;
+    width:20rem;
+    height: 20rem;
+    box-shadow: 0 0 10px 10px #52fefe, 0 0 18px 12px #52fefe inset;
+    top : 3rem;
+    left:13rem;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.scouterInfoDegLine {
+    position:absolute;
+    width:5rem;
+    transform: rotate(-23deg);
+    border:1px solid #52fefe;
+    animation: pulse 0.5s infinite;
+    top:6rem;
+    left:33rem;
+}
+.scouterInfoLine {
+    position:absolute;
+    width:10rem;
+    border:1px solid #52fefe;
+    animation: pulse 0.5s infinite;
+    top:5rem;
+    left:38rem;
+}
+.scouterText {
+    position:absolute;
+    color : #52fefe;
+    top:4rem;
+    left:39rem;
+    animation: pulse 0.5s infinite;
 }
