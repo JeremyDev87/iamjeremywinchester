@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #000;
+    height:500vh;
+}
+.firstContents {
+    background-color: #222931;
+    background-image: url("/img/bg4.jpeg");
+    background-repeat : no-repeat;
+    background-size : cover;
+    font-family: 'GongGothicMedium';
+    height:100vh;
+}
+.mainTitle {
+    position:absolute;
+    color:#fff;
+    right : 0;
+    margin : 1rem 1rem 0 0 ;
+    font-size: 60px;
+}
+.arcReactor {
+    position:absolute;
+    top : 25%;
+    right : 3%;
+    width: 40vw;
+    height:40vw;
+    background: radial-gradient(#222931, #000);
+    display: flex;
+}
+.reactor-container {
+    width: 40vw;
+    height: 40vw;
+    margin: auto;
+    /* border: 1px dashed #888888; */
+}
+.reactor-container-inner {
+    height: 35vw;
+    width: 35vw;
+    background-color: rgb(22, 26, 27);;
+    box-shadow: 0px 0px 6px 3px #52fefe;
+}
+.circle {
+    border-radius: 50%;
+
+}
+.abs-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.core-wrapper {
+    width: 170px;
+    height: 170px;
+    background-color: #073c4b;
+    box-shadow: 0px 0px 8px 8px #52fefe, 0px 0px 10px 2px #52fefe inset
+}
+.core-outer {
+    width: 110px;
+    height: 110px;
+    border: 1px solid #52fefe;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 7px 5px #52fefe, 0 0 18px 12px #52fefe inset;
+}
+.tunnel {
+    width: 210px;
+    height: 210px;
+    background-color: #fff;
+    box-shadow: 0px 0px 7px 6px #52fefe, 0px 0px 6px 2px #52fefe inset;
+}
+.core-inner {
+    width: 120px;
+    height: 120px;
+    border: 8px solid #1b4e5f;
+    box-shadow: 0 0 7px 5px #52fefe, 0 0 18px 12px #52fefe inset;
+    background-color: #FFFFFF;
+    animation: pulse 0.1s infinite;
+}
+.frame-inner {
+    width: 250px;
+    height: 250px;
+    border: 30px solid #1b4e5f;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 7px 5px #52fefe, 0 0 18px 12px #52fefe inset;
+}
+.frame-outer {
+    width: 330px;
+    height: 330px;
+    border: 20px solid #52fefe;
+    background-color: #a08a8a;
+    box-shadow: 0 0 7px 5px #52fefe, 0 0 18px 12px #52fefe inset;
+    animation: pulse 0.1s infinite;
+}
+.frame-coil1 {
+    width: 380px;
+    height: 20px;
+    background-color: gray;
+    transform: rotate(0deg);
+    animation: spin1 1s linear infinite;
+}
+.frame-coil2 {
+    width: 380px;
+    height: 20px;
+    background-color: gray;
+    transform: rotate(120deg);
+    animation: spin2 1s linear infinite;
+}
+.frame-coil3 {
+    width: 380px;
+    height: 20px;
+    background-color: gray;
+    transform: rotate(240deg);
+    animation: spin3 1s linear infinite;
+}
+.inner-coil1 {
+    width: 250px;
+    height: 20px;
+    background-color: gray;
+    transform: rotate(0deg);
+    animation: spin1 0.5s linear infinite;
+}
+.inner-coil2 {
+    width: 250px;
+    height: 20px;
+    background-color: gray;
+    transform: rotate(120deg);
+    animation: spin2 0.5s linear infinite;
+}
+.inner-coil3 {
+    width: 250px;
+    height: 20px;
+    background-color: gray;
+    transform: rotate(240deg);
+    animation: spin3 0.5s linear infinite;
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 7px 5px #52fefe, 0 0 18px 12px #52fefe inset;
+    }
+    50% {
+        box-shadow: 0 0 9px 2px #01cbcb, 0 0 29px 12px #01cbcb inset;
+    }
+    100% {
+        box-shadow: 0 0 7px 5px #52fefe, 0 0 18px 12px #52fefe inset;
+    }
+}
+@keyframes spin1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin2 {
+    from {
+        transform: rotate(120deg);
+    }
+    to {
+        transform: rotate(480deg);
+    }
+}
+@keyframes spin3 {
+    from {
+        transform: rotate(240deg);
+    }
+    to {
+        transform: rotate(600deg);
+    }
+}
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
