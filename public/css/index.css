@@ -196,6 +196,16 @@ body {
         opacity: 0;
     }
 }
+@keyframes show {
+    0% {
+        transform: translate(-100%, 0);
+        opacity: 0;
+    }
+    75%, 100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
 .secondContents {
     background-color: #222931;
     background-image: url("/img/bg11.jpeg");
@@ -206,44 +216,44 @@ body {
 }
 .scouter {
     position:absolute;
-    width:20rem;
-    height: 20rem;
+    width:300px;
+    height: 300px;
     border:5px solid #52fefe;
     box-shadow: 0 0 10px 10px #52fefe, 0 0 18px 12px #52fefe inset;
     animation: pulse 0.5s infinite;
-    top : 3rem;
-    left:13rem;
+    top : 45px;
+    left:200px;
 }
 .innerScouter {
     position:absolute;
-    width:20rem;
-    height: 20rem;
+    width:300px;
+    height: 300px;
     box-shadow: 0 0 10px 10px #52fefe, 0 0 18px 12px #52fefe inset;
-    top : 3rem;
-    left:13rem;
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    top : 45px;
+    left:200px;
+    animation: ping 0.5s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 .scouterInfoDegLine {
     position:absolute;
-    width:5rem;
+    width:80px;
     transform: rotate(-23deg);
     border:1px solid #52fefe;
     animation: pulse 0.5s infinite;
-    top:6rem;
-    left:33rem;
+    top:95px;
+    left:530px;
 }
 .scouterInfoLine {
     position:absolute;
-    width:10rem;
+    width:180px;
     border:1px solid #52fefe;
     animation: pulse 0.5s infinite;
-    top:5rem;
-    left:38rem;
+    top:80px;
+    left:608px;
 }
 .scouterText {
     position:absolute;
     color : #52fefe;
-    top:4rem;
-    left:39rem;
-    animation: pulse 0.5s infinite;
+    top:60px;
+    left:630px;
+    animation: show 1s forwards;
 }
