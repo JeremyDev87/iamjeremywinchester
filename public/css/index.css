@@ -9,12 +9,19 @@ body {
     height:500vh;
 }
 .firstContents {
-    background-color: #222931;
-    background-image: url("/img/bg4.jpeg");
-    background-repeat : no-repeat;
-    background-size : cover;
+    background-color: #000;
     font-family: 'GongGothicMedium';
     height:100vh;
+}
+.firstBG {
+    background-color: #222931;
+    background-image: url("/img/bg1.jpeg");
+    background-repeat : no-repeat;
+    background-size : cover;
+    height:100vh;
+    width: 100%;;
+    opacity: 0;
+    animation: fadeIn 3s 1s linear forwards;
 }
 .topTitle {
     position:absolute;
@@ -40,7 +47,7 @@ body {
     right : 3%;
     width: 40vw;
     height:40vw;
-    background: radial-gradient(#222931, #000);
+    background: transparent;
     display: flex;
 }
 .reactor-container {
@@ -57,7 +64,6 @@ body {
 }
 .circle {
     border-radius: 50%;
-
 }
 .abs-center {
     position: absolute;
@@ -153,12 +159,15 @@ body {
 }
 @keyframes pulse {
     0% {
+        opacity: 1;
         box-shadow: 0 0 7px 5px #52fefe, 0 0 18px 12px #52fefe inset;
     }
     50% {
+        opacity: 1;
         box-shadow: 0 0 9px 2px #01cbcb, 0 0 29px 12px #01cbcb inset;
     }
     100% {
+        opacity: 1;
         box-shadow: 0 0 7px 5px #52fefe, 0 0 18px 12px #52fefe inset;
     }
 }
@@ -196,9 +205,18 @@ body {
         opacity: 0;
     }
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 @keyframes show {
     0% {
-        transform: translate(-100%, 0);
+        transform: translate(0, 100%);
         opacity: 0;
     }
     75%, 100% {
@@ -206,13 +224,13 @@ body {
         opacity: 1;
     }
 }
-.secondContents {
-    background-color: #222931;
-    background-image: url("/img/bg11.jpeg");
-    background-repeat : no-repeat;
-    background-size : cover;
-    font-family: 'GongGothicMedium';
-    height:100vh;
+@keyframes hiddenToShow {
+    0% {
+        opacity: 0;
+    }
+    75%, 100% {
+        opacity: 1;
+    }
 }
 .scouter {
     position:absolute;
@@ -220,9 +238,17 @@ body {
     height: 300px;
     border:5px solid #52fefe;
     box-shadow: 0 0 10px 10px #52fefe, 0 0 18px 12px #52fefe inset;
-    animation: pulse 0.5s infinite;
     top : 45px;
     left:200px;
+    opacity: 0;
+}
+.delayShowANi {
+    animation: hiddenToShow 3s backwards;
+    animation-delay: 3000ms;
+}
+.delayPulseAni {
+    animation: pulse 0.5s infinite;
+    animation-delay : 4000ms;
 }
 .innerScouter {
     position:absolute;
@@ -231,29 +257,51 @@ body {
     box-shadow: 0 0 10px 10px #52fefe, 0 0 18px 12px #52fefe inset;
     top : 45px;
     left:200px;
+    opacity: 0;
+}
+.delayPingAni {
     animation: ping 0.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    animation-delay: 4000ms;
 }
 .scouterInfoDegLine {
     position:absolute;
     width:80px;
     transform: rotate(-23deg);
     border:1px solid #52fefe;
-    animation: pulse 0.5s infinite;
     top:95px;
     left:530px;
+    opacity : 0;
 }
 .scouterInfoLine {
     position:absolute;
     width:180px;
     border:1px solid #52fefe;
-    animation: pulse 0.5s infinite;
     top:80px;
     left:608px;
+    opacity: 0;
 }
 .scouterText {
     position:absolute;
     color : #52fefe;
     top:60px;
     left:630px;
+    opacity: 0;
+}
+.delayTextShowAni {
     animation: show 1s forwards;
+    animation-delay: 6000ms;
+}
+.infoLineAni {
+    animation: fadeIn 1s forwards;
+    animation-delay: 5000ms;
+
+}
+.secondContents {
+    background-color: #222931;
+    background-image: url("/img/bg2.jpg");
+    background-repeat : no-repeat;
+    background-size : cover;
+    font-family: 'GongGothicMedium';
+    height:100vh;
+    /* filter:blur(3px); */
 }
