@@ -4,6 +4,9 @@
     font-weight: normal;
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #000;
     height:500vh;
@@ -244,11 +247,11 @@ body {
 }
 .delayShowANi {
     animation: hiddenToShow 3s backwards;
-    animation-delay: 3000ms;
+    animation-delay: 2000ms;
 }
 .delayPulseAni {
     animation: pulse 0.5s infinite;
-    animation-delay : 4000ms;
+    animation-delay : 3000ms;
 }
 .innerScouter {
     position:absolute;
@@ -261,7 +264,7 @@ body {
 }
 .delayPingAni {
     animation: ping 0.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-    animation-delay: 4000ms;
+    animation-delay: 2000ms;
 }
 .scouterInfoDegLine {
     position:absolute;
@@ -289,11 +292,11 @@ body {
 }
 .delayTextShowAni {
     animation: show 1s forwards;
-    animation-delay: 6000ms;
+    animation-delay: 3000ms;
 }
 .infoLineAni {
     animation: fadeIn 1s forwards;
-    animation-delay: 5000ms;
+    animation-delay: 2000ms;
 
 }
 .secondContents {
@@ -306,7 +309,7 @@ body {
     opacity: 0;
 }
 .fadeInStyle {
-    animation: fadeIn 3s 1s linear forwards;
+    animation: fadeIn 1.5s 1s linear forwards;
 }
 .noshow {
     opacity : 0;
@@ -326,4 +329,7 @@ body {
     font-family: 'GongGothicMedium';
     height:100vh;
     opacity: 0;
+}
+.stackIcon {
+    color : #FFF;
 }
