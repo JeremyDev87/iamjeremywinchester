@@ -303,5 +303,18 @@ body {
     background-size : cover;
     font-family: 'GongGothicMedium';
     height:100vh;
-    /* filter:blur(3px); */
+    opacity: 0;
+}
+.fadeInStyle {
+    animation: fadeIn 3s 1s linear forwards;
+}
+.noshow {
+    opacity : 0;
+}
+.secondTitle {
+    color : #fff;
+    position:absolute;
+    font-size: 60px;
+    bottom : 0;
+    padding : 2rem;
 }

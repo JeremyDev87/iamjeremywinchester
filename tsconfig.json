@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "baseUrl":"./public/ts",
+        "outDir": "./public/js",
+        "noEmitOnError": true,
+        "target":"es5"
+    }
+}
