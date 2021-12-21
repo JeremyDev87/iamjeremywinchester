@@ -9,7 +9,7 @@ html {
 }
 body {
     background-color: #000;
-    height:500vh;
+    height:400vh;
 }
 .firstContents {
     background-color: #000;
@@ -212,7 +212,7 @@ body {
 }
 @keyframes ping {
     0% {
-        transform: scale(2);
+        transform: scale(1.5);
         opacity: 0.5;
     }
     75%, 100% {
@@ -359,47 +359,49 @@ body {
     height:100vh;
     opacity: 0;
     position: relative;
+    text-align: center;
 }
 .stackIcon {
     color : #FFF;
     opacity: 0;
     position:absolute;
-    text-align: center;
-    width:100vw;
     top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    margin : 0 auto;
     animation: tracking-out-expand-fwd-bottom 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) infinite;
 }
 .stackIcon:nth-child(1){
     animation-delay: 1500ms;
-    transform: translateZ(20rem) translateY(20rem) translateX(20rem);
+    transform: translateZ(5rem) translateY(5rem) translateX(5rem);
 }
 .stackIcon:nth-child(2){
     animation-delay: 2500ms;
-    transform: translateZ(20rem) translateY(-20rem) translateX(20rem);
+    transform: translateZ(5rem) translateY(-5rem) translateX(5rem);
 }
 .stackIcon:nth-child(3){
     animation-delay: 3500ms;
-    transform: translateZ(-20rem) translateY(20rem) translateX(-20rem);
+    transform: translateZ(-5rem) translateY(5rem) translateX(-5rem);
 }
 .stackIcon:nth-child(4){
     animation-delay: 4500ms;
-    transform: translateZ(-20rem) translateY(-20rem) translateX(-20rem);
+    transform: translateZ(-5rem) translateY(-5rem) translateX(-5rem);
 }
 .stackIcon:nth-child(5){
     animation-delay: 5500ms;
-    transform: translateZ(-15rem) translateY(-15rem) translateX(-15rem);
+    transform: translateZ(-8rem) translateY(-8rem) translateX(-8rem);
 }
 .stackIcon:nth-child(6){
     animation-delay: 6500ms;
-    transform: translateZ(-15rem) translateY(15rem) translateX(-15rem);
+    transform: translateZ(-8rem) translateY(8rem) translateX(-8rem);
 }
 .stackIcon:nth-child(7){
     animation-delay: 7500ms;
-    transform: translateZ(15rem) translateY(15rem) translateX(15rem);
+    transform: translateZ(8rem) translateY(8rem) translateX(8rem);
 }
 .stackIcon:nth-child(8){
     animation-delay: 8500ms;
-    transform: translateZ(15rem) translateY(-15rem) translateX(15rem);
+    transform: translateZ(8rem) translateY(-8rem) translateX(8rem);
 }
 .stackIcon:nth-child(9){
     animation-delay: 9500ms;
@@ -426,7 +428,18 @@ body {
     }
     100% {
     letter-spacing: 2em;
-    transform: translateZ(0) translateY(0) translateX(0);
+    transform: translateZ(0) translateY(-50%) translateX(-50%);
     opacity: 0;
     }
+}
+.fourthContents {
+    background-color: #222931;
+    background-image: radial-gradient(rgba(0, 0, 0,0.1), rgba(0, 0, 0,1)),url("/img/bg4.jpeg");
+    background-repeat : no-repeat;
+    background-size : cover;
+    font-family: 'GongGothicMedium';
+    height:100vh;
+    opacity: 0;
+    position: relative;
+    text-align: center;
 }
