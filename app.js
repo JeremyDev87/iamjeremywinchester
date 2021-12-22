@@ -28,30 +28,31 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 var session = require('express-session');
 app.use(session({
-  secret: 'kimbanseok',
-  resave: false,
-  saveUninitialized: true,
-  cookie:{
-    maxAge: 24000 * 60 * 60 // 24 시간 설정
-  }
+    secret: 'jeremy winchester',
+    resave: false,
+    saveUninitialized: true,
+    cookie:{
+        maxAge: 24000 * 60 * 60 // 24 시간 설정
+    }
 }));
 
 // view-router setting
 app.use('/', indexRouter);
 app.use('/api',apiRouter); //
 app.use(function(req, res, next) {
-  next(createError(404));
+    next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  winston.error(err.message);
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');  //error 페이지 포워딩
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    winston.error(err.message);
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');  //error 페이지 포워딩
 });
 
 module.exports = app;
+
