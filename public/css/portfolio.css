@@ -5,9 +5,43 @@
     top : 50%;
     left : 50%;
     transform: translate(-50%,-50%);
-    background-image: url("/img/portfolio/HPRD_1.png");
     background-repeat : no-repeat;
     background-size : contain;
     background-position: center;
-    /* border : 1px solid yellow; */
+    background-image: url("/img/portfolio/1.png");
+    transition: all .35s;
+}
+.portfolioArrow {
+    position:absolute;
+    top : 50%;
+    background-color: rgba( 255, 255, 255, 0.3 );
+    border-radius: 50%;
+    width : 50px;
+    height: 50px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    background-position: center;
+    cursor: pointer;
+}
+.leftArrow {
+    background-image: url("/img/partial/before.png");
+    filter:invert(100%);
+    left : 10%;
+}
+.rightArrow {
+    background-image: url("/img/partial/next.png");
+    filter:invert(100%);
+    right : 10%;
+}
+@keyframes flip-scale-up-hor {
+    0% {
+    transform: scale(1) rotateX(0);
+    }
+    50% {
+    transform: scale(2.5) rotateX(-180deg);
+    }
+    100% {
+    transform: scale(1) rotateX(0deg) translate(-50%,-50%);;
+    }
 }
