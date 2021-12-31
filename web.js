@@ -2,7 +2,7 @@ var app = require('./app');
 var debug = require('debug')('wuxi_app:server');
 var http = require('http');
 
-var port = normalizePort(process.env.PORT || '80'); //포트 설정
+var port = normalizePort(process.env.PORT || '8005'); //포트 설정
 app.set('port', port);
 
 /**
