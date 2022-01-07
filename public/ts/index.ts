@@ -27,12 +27,12 @@ const btnEvent = (parm:string) :void => {
     let imgDiv:HTMLDivElement = document.querySelector(".mainPortfolio");
     let imgUrl = imgDiv.style.backgroundImage;
     let imgUrlArr:string[] = imgUrl.split('/');
-    let nowImgNum : number= Number(imgUrlArr[imgUrlArr.length-1].replace('.png")',''));
+    let nowImgNum : number= Number(imgUrlArr[imgUrlArr.length-1].replace('.jpeg")',''));
     nowImgNum===0?nowImgNum=1:nowImgNum;
     parm==='next'?nowImgNum++:nowImgNum--;
-    nowImgNum = nowImgNum<1?10:nowImgNum;
-    nowImgNum = nowImgNum>10?1:nowImgNum;
-    imgDiv.style.backgroundImage=`url('/img/portfolio/${nowImgNum}.png')`;
+    nowImgNum = nowImgNum<1?7:nowImgNum;
+    nowImgNum = nowImgNum>7?1:nowImgNum;
+    imgDiv.style.backgroundImage=`url('/img/portfolio/${nowImgNum}.jpeg')`;
     let subtitle = document.querySelector(".fourthSubTitle span");
     let subDescription = document.querySelector(".fourthSubTitle p");
     switch(nowImgNum){

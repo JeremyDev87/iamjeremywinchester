@@ -24,12 +24,12 @@ var btnEvent = function (parm) {
     var imgDiv = document.querySelector(".mainPortfolio");
     var imgUrl = imgDiv.style.backgroundImage;
     var imgUrlArr = imgUrl.split('/');
-    var nowImgNum = Number(imgUrlArr[imgUrlArr.length - 1].replace('.png")', ''));
+    var nowImgNum = Number(imgUrlArr[imgUrlArr.length - 1].replace('.jpeg")', ''));
     nowImgNum === 0 ? nowImgNum = 1 : nowImgNum;
     parm === 'next' ? nowImgNum++ : nowImgNum--;
-    nowImgNum = nowImgNum < 1 ? 10 : nowImgNum;
-    nowImgNum = nowImgNum > 10 ? 1 : nowImgNum;
-    imgDiv.style.backgroundImage = "url('/img/portfolio/".concat(nowImgNum, ".png')");
+    nowImgNum = nowImgNum < 1 ? 7 : nowImgNum;
+    nowImgNum = nowImgNum > 7 ? 1 : nowImgNum;
+    imgDiv.style.backgroundImage = "url('/img/portfolio/".concat(nowImgNum, ".jpeg')");
     var subtitle = document.querySelector(".fourthSubTitle span");
     var subDescription = document.querySelector(".fourthSubTitle p");
     switch (nowImgNum) {
